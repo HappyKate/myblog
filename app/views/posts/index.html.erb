@@ -1,5 +1,9 @@
-<h3>Glavnaya</h3>
+<h2>Главная</h2>
 <% @post.each do |post| %>
-  <h3><%= post.title %></h3>
-  <h5><%= post.body %></h5>
+  <div class="well">
+    <h4 class="title"><%=link_to post.title, post %></h4>
+    <p class="date"><%= post.created_at.strftime("%d, %B, %Y")%></p>
+    <p><%= post.body%></p>
+    <hr>
+  </div>
 <% end %>

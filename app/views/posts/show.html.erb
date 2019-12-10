@@ -1,2 +1,28 @@
-<h3><% @post.title %></h3>
-<p><%@post.body %></p>
+<h3><%= @post.title %></h3>
+<p class="date"><%= time_ago_in_words(@post.created_at) %></p>
+<p><%= @post.body %></p>
+<hr>
+<%= link_to "Редактировать", edit_post_path(@post), :class => 'btn btn-outline-dark' %>
+<%= link_to "Удалить", post_path(@post), method: :delete, data: {confirm: 'Удалить статью?'}, :class => 'btn btn-outline-dark' %>
+<hr>
+<h4>Комментарии</h4>
+<% @post.comments.each do |comment| %>
+  <div class="well">
+    <p><strong><%= comment.username %></strong>: <%= comment.body%></p>
+  </div>
+<% end %>
+<hr>
+<h6>Добавить комментарий</h6>
+<%= form_for ([@post, @post.comments.build]) do |f|%>
+  <form>
+    <div class="form-group">
+      <label for="formGroupExampleInput">Имя пользователя</label>
+      <%= f.text_field :username, {:class => 'form-control'} %>
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput2">Комментарий</label>
+      <%= f.text_area :body, {:class => 'form-control'} %>
+    </div>
+    <p><%= f.submit("Сохранить",{:class => 'btn btn-outline-dark'})%></p>
+  </form>
+<%end%>
