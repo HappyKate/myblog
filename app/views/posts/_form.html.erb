@@ -13,6 +13,7 @@
       <label for="formGroupExampleInput2">Статья</label>
       <%= f.text_area :body, {:class => 'form-control'} %>
     </div>
+    <%= f.file_field :image %>
     <p><%= f.submit("Сохранить",{:class => 'btn btn-outline-dark'})%></p>
   </form>
 <%end%>
