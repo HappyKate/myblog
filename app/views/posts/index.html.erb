@@ -1,8 +1,13 @@
-<% @posts.each do |post| %>
-  <div class="well">
-    <h4 class="title"><%=link_to post.title, post %></h4>
-    <p class="date"><%= post.created_at.strftime("%d, %B, %Y")%></p>
-    <p><%= post.body%></p>
-    <hr>
-  </div>
-<% end %>
+ <div class="post">
+   <% @posts.each do |post| %>
+     <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+       <div class="col p-4 d-flex flex-column position-static">
+         <h2><%=link_to post.title, post, class: "post_name" %></h2>
+         <p class="post_date"><%= post.created_at.strftime("%d, %B, %Y")%></p>
+       </div>
+       <div class="col-auto d-none d-lg-block">
+         <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></svg>
+       </div>
+     </div>
+  <% end %>
+ </div>

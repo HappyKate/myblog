@@ -11,15 +11,68 @@ header{
 nav{
     display: inline;
 }
-.nav-link {
-    font-family: Arial, sans-serif;
+.navbar-dark .navbar-nav .nav-link {
+    color: #F7F7F7;
+    font-weight: 100;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #730E15;
 }
 .icon{
     width: 28px;
     height: 28px;
     text-align: right;
 }
-
 li{
     display: inline;
+}
+#head{
+    color: #F7F7F7;
+    font-size: 40px;
+    margin-top: 100px;
+    font-weight: 100;
+}
+a.head{
+    color: #F7F7F7;
+    font-weight: 100
+}
+a.head:hover{
+    text-decoration: none;
+    color: #730E15;
+}
+#sign_up{
+    margin-left: 7px;
+    font-weight: 100;
+}
+.post_name {
+    color: black;
+    font-weight: 200;
+}
+.post_name:hover {
+    color: #730E15;
+    text-decoration: none;
+}
+.post_date{
+    color: #666666;
+    font-size: 15px;
+}
+.post_body{
+    font-weight: 200;
+}
+.new_post{
+    color: black;
+    font-weight: 200;
+}
+.btn{
+    font-weight: 100;
+}
+.post{
+    columns: 2;
+}
+.footer{
+    background-color: black;
+    height: 50px;
+}
+.footer_text{
+    color: #F7F7F7;
 }

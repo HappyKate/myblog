@@ -25,13 +25,13 @@
 
       <div class="navbar-collapse collapse" id="navbarsExample07XL">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
+          <li>
             <a> <%= link_to "Главная страница", home_path, class: "nav-link" %></a>
           </li>
-          <li class="nav-item active">
+          <li>
             <a><%= link_to "О нас", about_path, class: "nav-link"%> </a>
           </li>
-          <li class="nav-item active">
+          <li>
             <a> <%= link_to "Новая статья", new_post_path, class: "nav-link"%></a>
           </li>
         </ul>
@@ -41,21 +41,28 @@
           <li><a href="https://www.instagram.com/katerinka96.13/"><%= image_tag("icons8-instagram-48.png", :alt => "INST", class: "icon") %></a></li>
           <li><a href="mailto:zlaaayya@gmail.com"><%= image_tag("icons8-gmail-48.png", :alt => "GMAIL", class: "icon") %></a></li>
         </ul>
-        <button type="button" class="btn btn-outline-light">Регистрация</button>
+        <button type="button" class="btn btn-outline-light" id="sign_up">Регистрация</button>
       </div>
     </div>
   </nav>
-  <% if current_page?(home_path) %>
-    <p class="">Все посты</p>
-  <% elsif current_page?(about_path)%>
-    <p>О нас</p>
-  <%else %>
-    <%= link_to"Вернуться ко всем постам", home_path %>
-  <%end %>
+  <div class="container" id="head">
+    <% if current_page?(home_path) %>
+      <p>Все посты</p>
+    <% elsif current_page?(about_path)%>
+      <p>О нас</p>
+    <%else %>
+      <%= link_to"Вернуться ко всем постам", home_path, class: "head" %>
+    <%end %>
+  </div>
 </header>
 
-  <div class="container">
+  <div class="container mt-4 md-4">
     <%= yield %>
+  </div>
+  <div class="footer mt-4 md-4">
+    <div class="container">
+      <p class="footer_text">Подвал</p>
+    </div>
   </div>
   </body>
 </html>
