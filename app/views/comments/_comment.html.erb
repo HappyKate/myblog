@@ -1,0 +1,9 @@
+<h4><%= @post.comments.count %> Комментарий</h4>
+<% @post.comments.each do |comment| %>
+  <div class="comment_content">
+    <p><strong><%= comment.username %></strong>: <%= comment.body%></p>
+    <p class="date"><%= time_ago_in_words(comment.created_at) %></p>
+  </div>
+  <p><%= link_to 'Удалить', [comment.post, comment], method: :delete, class: "btn btn-outline-dark", data:{confirm: 'Удалить комментарий?'} %></p>
+<% end %>
+<hr>

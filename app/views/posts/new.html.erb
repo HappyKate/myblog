@@ -1,19 +1,2 @@
 <h4>Новый пост</h4>
-<%= form_for :post, url: posts_path do |f|%>
-  <% if @post.errors.any? %>
-    <% @post.errors.full_messages.each do |msg| %>
-      <div class="alert alert-danger"><%=msg %></div>
-    <%end %>
-  <%end %>
-  <form>
-    <div class="form-group">
-      <label for="formGroupExampleInput">Название статьи</label>
-      <%= f.text_field :title, {:class => 'form-control'} %>
-    </div>
-    <div class="form-group">
-      <label for="formGroupExampleInput2">Статья</label>
-      <%= f.text_area :body, {:class => 'form-control'} %>
-    </div>
-    <p><%= f.submit("Сохранить",{:class => 'btn btn-outline-dark'})%></p>
-  </form>
-<%end%>
+<%= render 'form' %>

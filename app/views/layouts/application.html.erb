@@ -15,15 +15,44 @@
   </head>
 
   <body>
-  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-    <h5 class="my-0 mr-md-auto font-weight-normal">Web-blog</h5>
-    <nav class="my-2 my-md-0 mr-md-3">
-      <a class="p-2 text-dark"><%= link_to "Главная страница", home_path %></a>
-      <a class="p-2 text-dark"><%= link_to "О нас", about_path%></a>
-      <a class="p-2 text-dark"><%= link_to "Новая статья", new_post_path%></a>
-    </nav>
-    <a class="btn btn-outline-primary">Sign up</a>
-  </div>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-xl">
+      <a class="navbar-brand">Blog zlo</a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample07XL" aria-controls="navbarsExample07XL" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar-collapse collapse" id="navbarsExample07XL">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a> <%= link_to "Главная страница", home_path, class: "nav-link" %></a>
+          </li>
+          <li class="nav-item active">
+            <a><%= link_to "О нас", about_path, class: "nav-link"%> </a>
+          </li>
+          <li class="nav-item active">
+            <a> <%= link_to "Новая статья", new_post_path, class: "nav-link"%></a>
+          </li>
+        </ul>
+        <ul class="mt-3 md-3">
+          <li><a href="https://github.com/HappyKate"><%= image_tag("icons8-github-48.png", :alt => "GITHUB", class: "icon") %></a></li>
+          <li><a href="https://vk.com/id304033116"><%= image_tag("icons8-вконтакте-48.png", :alt => "VK", class: "icon") %></a></li>
+          <li><a href="https://www.instagram.com/katerinka96.13/"><%= image_tag("icons8-instagram-48.png", :alt => "INST", class: "icon") %></a></li>
+          <li><a href="mailto:zlaaayya@gmail.com"><%= image_tag("icons8-gmail-48.png", :alt => "GMAIL", class: "icon") %></a></li>
+        </ul>
+        <button type="button" class="btn btn-outline-light">Регистрация</button>
+      </div>
+    </div>
+  </nav>
+  <% if current_page?(home_path) %>
+    <p class="">Все посты</p>
+  <% elsif current_page?(about_path)%>
+    <p>О нас</p>
+  <%else %>
+    <%= link_to"Вернуться ко всем постам", home_path %>
+  <%end %>
+</header>
 
   <div class="container">
     <%= yield %>

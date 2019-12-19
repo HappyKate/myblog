@@ -1,3 +1,25 @@
-link_to{
-    color: #2E2F30;
+.navbar-dark{
+    background: rgba(0, 0, 0, 0.5);!important;
+}
+header{
+    height: 260px;
+    background-image: url("IMG_20190930_235533.jpeg");
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-size: cover;
+}
+nav{
+    display: inline;
+}
+.nav-link {
+    font-family: Arial, sans-serif;
+}
+.icon{
+    width: 28px;
+    height: 28px;
+    text-align: right;
+}
+
+li{
+    display: inline;
 }
