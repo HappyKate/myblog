@@ -44,7 +44,7 @@ a.head:hover{
     margin-left: 7px;
     font-weight: 100;
 }
-.post_name {
+.post_name, .post_name1 {
     color: black;
     font-weight: 200;
 }
@@ -56,6 +56,9 @@ a.head:hover{
     color: #666666;
     font-size: 15px;
 }
+.border{
+    border-radius: .25rem;
+}
 .post_body{
     font-weight: 200;
 }
@@ -66,8 +69,27 @@ a.head:hover{
 .btn{
     font-weight: 100;
 }
-.post{
-    columns: 2;
+
+.info_post{
+   columns: 2;
+    border: black;
+}
+.title-post{
+    padding: 1.5rem
+}
+.post_col{
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;!important;
+}
+
+.img-fluid{
+    width: 170px;
+    height: 220px;
+    text-align: right;
+}
+#image_post{
+    text-align: right;
 }
 .footer{
     background-color: black;

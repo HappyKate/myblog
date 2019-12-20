@@ -29,12 +29,11 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.destroy
 
-    redirect_to root_path
+    redirect_to post_path
   end
 
   def create
     @post = Post.new(post_params)
-    redirect_to root_path
     if(@post.save)
     redirect_to @post
     else
