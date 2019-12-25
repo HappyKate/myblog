@@ -5,11 +5,11 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
+    <script  type = " text / javascript "  src = " trix.js " > </script >
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -29,7 +29,7 @@
             <a> <%= link_to "Главная страница", home_path, class: "nav-link" %></a>
           </li>
           <li>
-            <a><%= link_to "О нас", about_path, class: "nav-link"%> </a>
+            <a><%= link_to "Автор", about_path, class: "nav-link"%> </a>
           </li>
           <li>
             <a> <%= link_to "Новая статья", new_post_path, class: "nav-link"%></a>
@@ -41,7 +41,9 @@
           <li><a href="https://www.instagram.com/katerinka96.13/"><%= image_tag("icons8-instagram-48.png", :alt => "INST", class: "icon") %></a></li>
           <li><a href="mailto:zlaaayya@gmail.com"><%= image_tag("icons8-gmail-48.png", :alt => "GMAIL", class: "icon") %></a></li>
         </ul>
-        <button type="button" class="btn btn-outline-light" id="sign_up">Регистрация</button>
+        <div class="actions">
+          <%= link_to "Вход", user_session_path, class: 'btn btn-outline-light', id: 'sign_up' %>
+        </div>
       </div>
     </div>
   </nav>
@@ -49,7 +51,7 @@
     <% if current_page?(home_path) %>
       <p>Все посты</p>
     <% elsif current_page?(about_path)%>
-      <p>О нас</p>
+      <p>Автор</p>
     <%else %>
       <%= link_to"Вернуться ко всем постам", home_path, class: "head" %>
     <%end %>
@@ -59,9 +61,10 @@
   <div class="container mt-4 md-4" id="content">
     <%= yield %>
   </div>
-  <div class="footer mt-4 md-4">
-    <div class="container">
-      <p class="footer_text">Подвал</p>
+  <div class="footer mt-5 md-5">
+    <div class="container" id="footer_size">
+      <div class="footer_text">Разработка сайта - <a class="git" href="https://github.com/HappyKate">HappyKate</a>
+      </div>
     </div>
   </div>
   </body>

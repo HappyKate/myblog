@@ -1,11 +1,11 @@
-<h6>Добавить комментарий</h6>
+<h4 class="post_body">Добавить комментарий</h4>
 <%= form_for ([@post, @post.comments.build]) do |f|%>
   <form>
     <div class="form-group">
-      <label for="formGroupExampleInput">Имя пользователя</label>
+      <label for="formGroupExampleInput" class="post_body">Имя пользователя</label>
       <%= f.text_field :username, {:class => 'form-control'} %>
     </div>
-    <div class="form-group">
+    <div class="form-group post_body">
       <label for="formGroupExampleInput2">Комментарий</label>
       <%= f.text_area :body, {:class => 'form-control'} %>
     </div>
