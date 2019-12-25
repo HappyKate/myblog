@@ -1,5 +1,5 @@
 <h1 class="post_name1"><%= @post.title%></h1>
-<p class="post_date1"><%= time_ago_in_words(@post.created_at) %></p>
+<p class="post_date1"><%=I18n.t time_ago_in_words(@post.created_at) %></p>
 
 <p class="post_body"><%=raw @post.body %></p>
 <div id="strela">
