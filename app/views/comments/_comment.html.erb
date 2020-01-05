@@ -1,11 +1,11 @@
 <div class="row">
   <div class="col-9">
-    <p class="post_body"><strong><%= comment.username %></strong>: <%= comment.body%></p>
-    <p class="post_date1"><%= time_ago_in_words(comment.created_at) %></p>
+    <p class="post_body"><strong><%= comment.username %></strong>: <%= comment.body %></p>
+    <p class="post_date1"><%= time_ago_in_words(comment.created_at) %> ago</p>
   </div>
   <div class="col-3">
     <p><%= link_to 'Удалить', [comment.post, comment], method: :delete, class: "btn btn-outline-dark",
-                   data:{confirm: 'Удалить комментарий?'}, id: "btn" %></p>
+                   data: {confirm: 'Удалить комментарий?'}, id: "btn" %></p>
   </div>
 </div>
 <hr>

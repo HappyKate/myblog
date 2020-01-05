@@ -1,10 +1,10 @@
 <div class="post_col">
   <% @posts.each do |post| %>
     <div class="col-md-6 mt-4 md-4">
-      <div class="info_post flex-md-row border shadow-sm">
+      <div class="info_post  border shadow-sm">
         <div class="title-post">
           <h4><%=link_to post.title, post, class: "post_name" %></h4>
-          <p class="post_date"><%= t(post.created_at.strftime("%d, %b, %Y"))%></p>
+          <p class="post_date"><%= post.created_at.strftime("%d, %b, %Y")%></p>
         </div>
         <div id="image_post"><% if post.image.attached? %>
             <%= image_tag rails_blob_path(post.image, 'attachment'), class: 'img-fluid' %>
