@@ -128,7 +128,7 @@ GEM
     public_suffix (4.0.1)
     puma (3.12.2)
     puma (3.12.2-java)
-    rack (2.0.7)
+    rack (2.0.8)
     rack-proxy (0.6.5)
       rack
     rack-test (1.1.0)
@@ -199,8 +199,6 @@ GEM
     thread_safe (0.3.6)
     thread_safe (0.3.6-java)
     tilt (2.0.10)
-    trix (0.10.1)
-      rails
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -255,7 +253,6 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3 (~> 1.4)
-  trix
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 3.3.0)
