@@ -4,8 +4,10 @@
     <p class="post_date1"><%= time_ago_in_words(comment.created_at) %> ago</p>
   </div>
   <div class="col-3">
-    <p><%= link_to 'Удалить', [comment.post, comment], method: :delete, class: "btn btn-outline-dark",
-                   data: {confirm: 'Удалить комментарий?'}, id: "btn" %></p>
+    <% if user_signed_in? %>
+      <p><%= link_to 'Удалить', [comment.post, comment], method: :delete, class: "btn btn-outline-dark",
+                     data: {confirm: 'Удалить комментарий?'}, id: "btn" %></p>
+    <%end %>
   </div>
 </div>
 <hr>
