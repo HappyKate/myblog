@@ -112,7 +112,7 @@ a.head:hover{
 .post_col{
     box-sizing: border-box;
     display: flex;
-    flex-wrap: wrap;!important;
+    flex-wrap: wrap;
 }
 #content, #footer_size{
     padding: unset;
