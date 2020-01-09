@@ -5,8 +5,6 @@ ruby '2.6.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -22,7 +20,9 @@ gem 'jbuilder', '~> 2.7'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.13'
 gem 'devise'
-
+group :production do
+  gem 'pg'
+end
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 gem 'rake'
@@ -30,6 +30,8 @@ gem 'rake'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3', '~> 1.4'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
