@@ -1,6 +1,6 @@
 
 .navbar-dark{
-    background: rgba(0, 0, 0, 0.5);!important;
+    background: rgba(0, 0, 0, 0.5);
 }
 header{
     height: 260px;
@@ -156,7 +156,7 @@ a:hover{
 #about{
     box-sizing: border-box;
     display: flex;
-    flex-wrap: wrap;!important;
+    flex-wrap: wrap;
 }
 .password{
     color: black;
@@ -190,7 +190,7 @@ a:hover{
     .icon{
         width: 28px;
         height: 28px;
-        text-align: left;!important;
+        text-align: left;
     }
     .mt-3{
         padding: 0px;
