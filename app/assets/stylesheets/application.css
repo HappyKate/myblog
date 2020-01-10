@@ -4,7 +4,7 @@
 }
 header{
     height: 260px;
-    background-image: url('IMG_20190930_235533.jpeg');
+    background-image: image('IMG_20190930_235533.jpeg');
     background-repeat: no-repeat, repeat;
     background-position: center;
     background-size: cover;
