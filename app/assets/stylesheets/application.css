@@ -4,7 +4,7 @@
 }
 header{
     height: 260px;
-    background-image: url(IMG_20190930_235533.jpeg);
+    background-image: url('IMG_20190930_235533.jpeg');
     background-repeat: no-repeat, repeat;
     background-position: center;
     background-size: cover;
@@ -35,7 +35,8 @@ li{
 }
 a.head{
     color: #F7F7F7;
-    font-weight: 100
+    font-weight: 100;
+    height: auto;
 }
 a.head:hover{
     text-decoration: none;
@@ -209,7 +210,6 @@ a:hover{
     }
     #head{
         text-align: left;
-        margin-left: 1rem;
     }
     .media{
         flex: 100%;
