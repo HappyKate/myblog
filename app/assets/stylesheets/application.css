@@ -219,6 +219,7 @@ a:hover{
 
     #about{
         justify-content: center;
+        display: block;
     }
     .footer_text{
         text-align: center;
