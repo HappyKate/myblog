@@ -2,12 +2,12 @@
 .navbar-dark{
     background: rgba(0, 0, 0, 0.5);
 }
-.image_head{
+header{
     height: 260px;
-    position: absolute;
-    object-fit: cover;
-    width: 100%;
-
+    background-image: url("IMG_20190930_235533.jpeg");
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-size: cover;
 }
 nav{
     display: inline;
