@@ -24,8 +24,10 @@
 <hr>
 <h4 class="post_body"><%= @post.comments.count %> Comments</h4>
 <div class="mt-3 md-3">
+  <div class="container">
   <%= render @post.comments %>
   <% if user_signed_in? %>
     <%= render 'comments/form' %>
   <% end %>
+  </div>
 </div>
